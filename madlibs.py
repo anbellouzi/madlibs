@@ -23,10 +23,14 @@ def user_input(prompt):
     return user_input
 
 def print_to_screen():
-        print("One of the "+ read(0) +" and most gripping scenes of the movie was when " + read(1) +
-        ",an " + read(2) + " athlete, and Carl Ludwing Long, jumper from " + read(3) +
-        ",were competing up to their celebration. This particular scene stood out to "+
-         "all of us because it was one of the most " + read(4) +  " scene in the movie.")
+        print("One of the \033[0;32m"+ read(0) +"\033[0m and most gripping scenes of the movie was when \033[33;0;33m" + read(1) +
+        "\033[0m,an \033[35;5;35m" + read(2) + "\033[0m athlete, and Carl Ludwing Long, jumper from \033[37;4;37m" + read(3) +
+        "\033[0m,were competing up to their celebration. This particular scene stood out to "+
+         "all of us because it was one of the most \033[36;6;36m" + read(4) +  "\033[0m scene in the movie.")
+
+# print("\033[0;32mGREEN TEXT\033[0m")
+# print "\033[5;41;32mGREEN TEXT\033[0m"
+
 
 def test():
     create(user_input("Enter an adjective: "))
