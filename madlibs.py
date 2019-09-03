@@ -22,6 +22,8 @@ def user_input(prompt):
     user_input = input(prompt)
     return user_input
 
+
+
 def print_to_screen():
         print("One of the \033[0;32m"+ read(0) +"\033[0m and most gripping scenes of the movie was when \033[33;0;33m" + read(1) +
         "\033[0m,an \033[35;5;35m" + read(2) + "\033[0m athlete, and Carl Ludwing Long, jumper from \033[37;4;37m" + read(3) +
@@ -33,11 +35,36 @@ def print_to_screen():
 
 
 def test():
-    create(user_input("Enter an adjective: "))
-    create(user_input("Enter an actor/actress: "))
-    create(user_input("Enter an race: "))
-    create(user_input("Enter an country: "))
-    create(user_input("Enter an verb: "))
+    adjective = user_input("Enter an adjective: ")
+    actor = user_input("Enter an actor/actress: ")
+    race = user_input("Enter an race: ")
+    country = user_input("Enter an country: ")
+    verb = user_input("Enter an verb: ")
+
+    if adjective:
+        create(adjective)
+    else:
+        create("best")
+
+    if actor:
+        create(actor)
+    else:
+        create("Michael Cane")
+
+    if race:
+        create(race)
+    else:
+        create("American")
+
+    if country:
+        create(country)
+    else:
+        create("Italy")
+
+    if verb:
+        create(verb)
+    else:
+        create("gripping")
 
     print_to_screen()
 
